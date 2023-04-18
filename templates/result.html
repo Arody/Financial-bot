@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado del análisis financiero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <main>
+            <h1>Resultado del análisis financiero: {{ symbol }}</h1>
+            <h2>{{ nombre_empresa }}</h2>
+            <h2>Métricas financieras:</h2>
+            <ul>
+            {% for key, value in metricas.items() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+            </ul>
+            {% if cumple_criterios %}
+                <p>La empresa cumple con los criterios de inversión.</p>
+            {% else %}
+                <p>La empresa no cumple con los criterios de inversión.</p>
+            {% endif %}
+            <h2>Análisis Inteligencia Artificial</h2>
+            <p>{{ analisis_openai }}</p>
+
+            <a href="/">Volver a analizar otra empresa</a>
+        </main>
+
+    </div>
+</body>
+</html>

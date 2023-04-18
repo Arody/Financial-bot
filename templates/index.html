@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador financiero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+
+        <main>
+
+            <h1>Analizador financiero</h1>
+            <form action="/" method="post">
+                <label for="symbol">Seleccione una compañía:</label>
+                <select id="symbol" name="symbol" required>
+                  <option value="">--Seleccione una compañía--</option>
+                  <option value="AAPL">Apple Inc. (AAPL)</option>
+                  <option value="MSFT">Microsoft Corporation (MSFT)</option>
+                  <option value="AMZN">Amazon.com, Inc. (AMZN)</option>
+                  <option value="GOOG">Alphabet Inc. (Google) (GOOG)</option>
+                  <option value="GOOGL">Alphabet Inc. (Google, Class A) (GOOGL)</option>
+                  <option value="FB">Meta Platforms, Inc. (anteriormente Facebook, Inc.) (FB)</option>
+                  <option value="TSLA">Tesla, Inc. (TSLA)</option>
+                  <option value="BRK-A">Berkshire Hathaway Inc. (Clase A) (BRK-A)</option>
+                  <option value="BRK-B">Berkshire Hathaway Inc. (Clase B) (BRK-B)</option>
+                  <option value="V">Visa Inc. (V)</option>
+                  <option value="JPM">JPMorgan Chase & Co. (JPM)</option>
+                  <option value="JNJ">Johnson & Johnson (JNJ)</option>
+                  <option value="WMT">Walmart Inc. (WMT)</option>
+                  <option value="PG">Procter & Gamble Company (PG)</option>
+                  <option value="NVDA">NVIDIA Corporation (NVDA)</option>
+                </select>
+
+                <label for="inversionista">Seleccione un tipo de inversionista:</label>
+                
+                <select id="inversionista" name="inversionista" required>
+                    <option value="">--Seleccione un tipo de inversionista--</option>
+                    <option value="conservador">Conservador</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="arriesgado">Arriesgado</option>
+                </select>
+                <button type="submit">Buscar</button>
+              </form>
+              
+
+        </main>
+   
+    </div>
+</body>
+</html>
